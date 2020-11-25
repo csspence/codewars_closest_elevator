@@ -19,6 +19,15 @@ elevator(0, 0, 0); // => "right"
 elevator(0, 2, 1); // => "right"
 */
 
-function elevator(left, right, call){
-  // code on! :)
+const elevator = (left, right, call) => {
+  if(right === left) {
+    return 'right';
+  }
+  if(left === call) {
+    return 'left';
+  } else if(right === call) {
+    return 'right';
+  } else {
+    return right + call > left + call ? 'right' : 'left';
+  }
 }
